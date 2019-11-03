@@ -1,4 +1,4 @@
-# ts_demo1
+# Ts-Vue-Todo
 
 ## Project setup
 ```
