@@ -1,6 +1,9 @@
 import Axios from 'axios'
 import Sha1 from 'sha1'
 import bus from '@/utils/bus'
+import dbConfig from '../no-push/db.config'
+
+const config: ConfigInterface = dbConfig;
 
 interface ConfigInterface {
   baseHost?: string
@@ -15,15 +18,9 @@ interface RequestInterface {
   post?: any
 }
 
-const NOW: string = Date.now().toString();
-
-const config: ConfigInterface = {
-  baseHost: 'https://d.apicloud.com/mcm/api',
-  appId: '你的App id',
-  addKey: '你的App key'
-};
 
 // 设置连接数据库的axios
+const NOW: string = Date.now().toString();
 const request: object = Axios.create({
   baseURL: config.baseHost,
   timeout: 3000,
