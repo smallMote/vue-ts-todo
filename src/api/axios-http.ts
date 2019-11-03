@@ -15,12 +15,12 @@ interface RequestInterface {
   post?: any
 }
 
-const NOW: string = Date.now().toString()
+const NOW: string = Date.now().toString();
 
 const config: ConfigInterface = {
   baseHost: 'https://d.apicloud.com/mcm/api',
-  appId: 'A6027939676589',
-  addKey: 'B3359E33-776E-B0AC-A641-E32E06BDD0C5'
+  appId: '你的App id',
+  addKey: '你的App key'
 };
 
 // 设置连接数据库的axios
@@ -39,6 +39,7 @@ export class DBConn {
   private url: string | undefined;
   private config: ConfigInterface;
   private request: RequestInterface;
+  
   constructor(url?: string) {
     this.url = url;
     this.request = request;
